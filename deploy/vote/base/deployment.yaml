@@ -1,40 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  generation: 3
+  creationTimestamp: null
   labels:
     app: vote
-    tier: front
   name: vote
-  namespace: instavote
 spec:
-  progressDeadlineSeconds: 600
-  replicas: 3
-  revisionHistoryLimit: 10
-  selector:
-    matchLabels:
-      app: vote
-  strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
+  minReadySeconds: 20
+  replicas: 1
   template:
-    metadata:
-      creationTimestamp: null
-      labels:
-        app: vote
-        tier: front
     spec:
       containers:
         - image: schoolofdevops/vote:v1
-          imagePullPolicy: IfNotPresent
           name: vote
-          resources: {}
-          terminationMessagePath: /dev/termination-log
-          terminationMessagePolicy: File
-      dnsPolicy: ClusterFirst
-      restartPolicy: Always
-      schedulerName: default-scheduler
-      securityContext: {}
-      terminationGracePeriodSeconds: 30
