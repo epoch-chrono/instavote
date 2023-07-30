@@ -4,6 +4,7 @@ metadata:
   generation: 3
   labels:
     app: vote
+    tier: front
   name: vote
   namespace: instavote
 spec:
@@ -23,6 +24,7 @@ spec:
       creationTimestamp: null
       labels:
         app: vote
+        tier: front
     spec:
       containers:
         - image: schoolofdevops/vote:v1
