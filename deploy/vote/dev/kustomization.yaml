@@ -5,7 +5,9 @@ resources:
   - ../base
 patchesStrategicMerge:
   - deployment.yaml
-
+spec:
+  dependsOn:
+    - name: redis
 commonLabels:
   project: instavote
   env: dev
