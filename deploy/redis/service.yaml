@@ -4,15 +4,7 @@ metadata:
   labels:
     app: redis
   name: redis
-  namespace: instavote
 spec:
-  clusterIP: 10.96.24.125
-  clusterIPs:
-    - 10.96.24.125
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-    - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
     - name: "6379"
       port: 6379
@@ -20,5 +12,4 @@ spec:
       targetPort: 6379
   selector:
     app: redis
-  sessionAffinity: None
   type: ClusterIP
