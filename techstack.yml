@@ -2,7 +2,7 @@ repo_name: epoch-chrono/instavote
 report_id: 31793723b21b3ee34ef641740d99de2e
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-31T13:20:37+00:00'
+timestamp: '2024-02-29T19:46:17+00:00'
 requested_by: vitor-junior
 provider: github
 branch: main
@@ -411,6 +411,18 @@ tools:
   last_updated_by: Gourav Shah
   last_updated_on: 2021-03-30 08:09:25.000000000 Z
   vulnerabilities:
+  - name: org.postgresql:postgresql vulnerable to SQL Injection via line comment generation
+    cve_id: CVE-2024-1597
+    cve_url: https://github.com/advisories/GHSA-24rp-q3w6-vc56
+    detected_date: Feb 22
+    severity: critical
+    first_patched: 42.2.28
+  - name: 'Duplicate Advisory: SQL injection in pgjdbc'
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-xfg6-62px-cxc2
+    detected_date: Feb 21
+    severity: critical
+    first_patched: 42.2.8
   - name: PostgreSQL JDBC Driver SQL Injection in ResultSet.refreshRow() with malicious
       column names
     cve_id: CVE-2022-31197
